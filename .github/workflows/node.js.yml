@@ -30,4 +30,4 @@ jobs:
     - run: npm run build --if-present
     - run: |
         touch .env
-        echo "${{secrets.EWALLET_SECERTS}}" > .env
+        echo "${{secrets.EWALLET}}" > .env
