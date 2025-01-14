@@ -26,3 +26,15 @@ export const getTransactions = async (req, res) => {
     }
 }
 
+export const deleteTransaction = async (req, res) => {
+    const { id } = req.params;
+    try {
+        await Transaction.findByIdAndDelete(id);
+        res.status(200).send("Transaction deleted successfully");
+    }
+    catch(err) {
+        console.error(err.message);
+        res.status(500).send("Server Error");
+    }
+}
+
