@@ -11,7 +11,11 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://e-wallet-b9lhci3g4-wimukthimadushans-projects.vercel.app',
+  credentials: true,
+}));
+
 app.use(bodyParser.json());
 app.use(express.json());
 
