@@ -12,7 +12,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors({
-  origin: 'https://e-wallet-b9lhci3g4-wimukthimadushans-projects.vercel.app',
+  origin: 'https://e-wallet-five-nu.vercel.app/',
   credentials: true,
 }));
 
